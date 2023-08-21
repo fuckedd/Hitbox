@@ -79,7 +79,7 @@ local function ToggleRunning()
 end
 
 local function OnKeyPress(input)
-    if input.KeyCode == Enum.KeyCode.Q then
+    if input.KeyCode == Enum.KeyCode.H then
         ToggleRunning()
     end
 end
