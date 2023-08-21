@@ -70,10 +70,8 @@ end
 local function ToggleRunning()
     isRunning = not isRunning
     if isRunning then
-        print("Script activated.")
         ToggleScript()
     else
-        print("Script deactivated.")
         ResetHitboxes() -- Reset hitboxes when the script is deactivated
     end
 end
