@@ -85,5 +85,6 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
             end
         end
     end
+end)
 
 UserInputService.InputBegan:Connect(OnKeyPress)
