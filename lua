@@ -76,13 +76,14 @@ local function ToggleRunning()
     end
 end
 
-local function onKeyPress(input)
-    if input.KeyCode == Enum.KeyCode.H then
-        local textBoxFocused = userInputService:GetFocusedTextBox()
-        if not textBoxFocused then
-           ToggleRunning()
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if not gameProcessedEvent then
+        if input.KeyCode == Enum.KeyCode.H then
+            local textBoxFocused = UserInputService:GetFocusedTextBox()
+            if not textBoxFocused then
+                ToggleRunning()
+            end
         end
     end
-end
 
 UserInputService.InputBegan:Connect(OnKeyPress)
